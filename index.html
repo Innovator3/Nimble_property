@@ -462,19 +462,23 @@
     </div>
 
     <script>
-        // Complete data from Excel sheet with all details
+        // ============================================================
+        // UPDATED DATA FROM CSV (Nimble_Clients_Update(Clients)(6).csv)
+        // 214 total entries - Design kept 100% identical
+        // ============================================================
         const clients = [
             {url: "https://2347mgmt.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://3923.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://3923.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://abenovllc.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://abhhotels.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://abr.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://accounting.nimbleproperty.net", status: "Active(Hold)", type: "Bookkeeping", buildType: "View Access", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://acctbkpg.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://ah.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://ahi.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable + Dailysale", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://ahi.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://ahsi.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://ail.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://amb.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale + Cash&Checks + JournalEntry", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://amb.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://anr.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://apex.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://apm.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
@@ -483,14 +487,16 @@
             {url: "https://athoshotels.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://atithi.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://bayview.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://bayviewgroup.nimbleproperty.net", status: "Active", type: "Bookkeeping & Software", buildType: "Payable", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
+            {url: "https://bayviewgroup.nimbleproperty.net", status: "Active", type: "bookkeeping & software", buildType: "Payable Latest Issues", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
             {url: "https://bd.nimbleproperty.net", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://bdg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://bdg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://beenz.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "View Access", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://bh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://bijal.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://blueridge.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://blueridgemountaininn.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://bmshotels.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://bmhg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://branhospitality.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://brahmas.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://bsc.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
@@ -498,20 +504,20 @@
             {url: "https://bw.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://bwnj.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://cardinal.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://cdr.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://cdr.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://chanakya.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://chg.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://chi.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://clarus.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://clarus.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://clearview.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://cloverhg.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://concepthotel.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://crownhotels.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://cwh.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://cyclone.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://das.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://datg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://delta.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://das.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://datg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://delta.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://demo.nimbleproperty.net/", status: "Active", type: "Non-Production", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://devansh.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
             {url: "https://did.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
@@ -524,48 +530,49 @@
             {url: "https://fhg.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://ganesh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://ghs.nimbleproperty.net/", status: "Active", type: "Software", buildType: "View Access", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://globexmanagement.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable + Dailysale", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
+            {url: "https://globexmanagement.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
             {url: "https://globalresorts.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://gokulesh.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale + Cash&Checks", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://gokulesh.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://gs.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
             {url: "https://hasg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://hb.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://heriaum.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://hiesc.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://hmg.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://hotelsolutions.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable + Cash&Checks", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://hotelsolutions.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://hpad.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://ih.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://ikhanic.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://ikonhotels.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://il.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://infinipower.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://infinity.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://innin.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://insignia.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://infinipower.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://infinity.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://innin.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://insignia.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://ivh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://integrityhm.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://jamsan.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.12.1.172", dbIP: "10.12.1.87", instance: "Jamsan"},
             {url: "https://jasmin.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://jh.nimbleproperty.net", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://jrea.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://jrea.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://juma.nimbleproperty.net/", status: "Inactive (renamed to ascendhotelgroup)", type: "Bookkeeping", buildType: "Inactive", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://jvk.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://kanha.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://kansagra.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://karwalgroup.nimbleproperty.net", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://kashhotels.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://kanha.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://kansagra.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://karwalgroup.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://kashhotels.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://kgh.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://klg.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://knj.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://kph.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://kphotels.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://kusa.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://kuva.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://kusa.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://kuva.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://lamere.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://laurel.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://laurel.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://legacy.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://legacyhm.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://lmg.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://lmg.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Latest", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://locus.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://lodgic.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://lodgingventures.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
@@ -577,12 +584,12 @@
             {url: "https://m6s6.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://maruthi.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://maverick.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://metriqe.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://metriqe.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://mc.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://mcneill.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://mht.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://mnj.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable + Dailysale", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://morpheus.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://mnj.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://morpheus.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://mpire.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://mysson.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://mystic.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
@@ -591,85 +598,85 @@
             {url: "https://nanak.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://nexgen.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://ohg.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://olife.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://olife.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://omega.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Separate Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://oms.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://onni.nimbleproperty.net", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
-            {url: "https://opal.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://opalusa.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://onni.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable Latest", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
+            {url: "https://opal.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://opalusa.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://optimum.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://paragon.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://paragon.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://payableclone.nimbleproperty.net", status: "", type: "Testing", buildType: "Testing purpose", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://payabletest.nimbleproperty.net", status: "", type: "Testing", buildType: "", appIP: "", dbIP: "", instance: "Sunray"},
             {url: "https://pb.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable + Retail", appIP: "", dbIP: "10.2.1.239", instance: "Services"},
             {url: "https://pds.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://pegasus.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://pegasuskp.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://pegasus.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://pegasuskp.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://pfh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://pgc.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://ph.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://phg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://ph.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Latest Issues", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://phg.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Latest Issues", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://pink.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://plm.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://pphospitality.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://pphospitality.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Latest Issues", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://prada.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://preeminent.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale + Cash&Checks", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://preeminent.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://presidio.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://presley.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://prestige.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://prestigehosp.nimbleproperty.net/", status: "", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://pride.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://primeview.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://presley.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://prestige.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://prestigehosp.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://pride.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://primeview.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://pro.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://ptosh.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://qdiusa.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://qh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://raps.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://raps.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://rar.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://rhg.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://riverbrook.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://rhg.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
+            {url: "https://riverbrook.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://rjhm.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://rkglobal.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://rmp.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://roc.nimbleproperty.net", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://rrh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://rrh.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://rrl.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://rushin.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://rushin.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://rvsh.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://sa.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://sal.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
-            {url: "https://sales.nimbleproperty.net/", status: "Active", type: "Non-Production", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://sales.nimbleproperty.net/", status: "Active", type: "Non-Production", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://sar.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://sarup.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://savitrestates.nimbleproperty.net/", status: "Active", type: "Software & Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://savitrestates.nimbleproperty.net/", status: "Active", type: "Software&Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://savoy.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://sbp.nimbleproperty.net/", status: "Active", type: "Software", buildType: "View Access", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://se.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://shmd.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://sih.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://snashfin.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://snydermotels.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://snydermotels.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://sr.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://srhm.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Bank Feeds & Dashboard", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://srp.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://ssl.nimbleproperty.net", status: "", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://ssnhotels.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://ssl.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://ssnhotels.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://staybridge.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://sundramltd.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
-            {url: "https://sunray.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
+            {url: "https://sunray.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable Latest Issues", appIP: "10.13.1.100", dbIP: "10.13.1.253", instance: "Sunray"},
             {url: "https://sweet2017.nimbleproperty.net", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.238", dbIP: "10.2.1.141", instance: "4"},
             {url: "https://test.nimbleproperty.net/", status: "Active", type: "Non-Production", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://the9group.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://thinkhospitality.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://titusgroup.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable + Dailysale", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
+            {url: "https://thinkhospitality.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://titusgroup.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://tnj.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://tnrg.nimbleproperty.net/", status: "Active", type: "Software", buildType: "Old Build", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://training.nimbleproperty.net", status: "Active", type: "Non-Production", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://training.nimbleproperty.net", status: "Active", type: "Non-Production", buildType: "Payable Dailysale Latest", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://upper.nimbleproperty.net/", status: "Active (Local Use)", type: "Software", buildType: "Inactive", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://ushospitality.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
-            {url: "https://vantage.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
+            {url: "https://vantage.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable Dailysale Latest", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
             {url: "https://vasu.nimbleproperty.net/", status: "Inactive", type: "Software", buildType: "Inactive", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
-            {url: "https://vsq.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
+            {url: "https://vsq.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Payable  + Cash&Checks", appIP: "10.2.1.153", dbIP: "10.2.1.239", instance: "1"},
             {url: "https://wagnerhm.nimbleproperty.net", status: "Active", type: "Software", buildType: "Payable", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://welcome.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.114", dbIP: "10.2.1.69", instance: "3"},
             {url: "https://wellness.nimbleproperty.net/", status: "Active", type: "Bookkeeping", buildType: "Old Build", appIP: "10.2.1.104", dbIP: "10.2.1.124", instance: "2"},
@@ -687,12 +694,10 @@
         const filterButtons = document.querySelectorAll('.filter-btn');
         let currentFilter = 'all';
 
-        // Function to extract client name from URL
         function getClientName(url) {
             return url.replace('https://', '').replace('http://', '').split('.')[0];
         }
 
-        // Function to determine status class
         function getStatusClass(status) {
             if (!status) return '';
             if (status.includes('Active')) return 'status-active';
@@ -701,97 +706,56 @@
             return '';
         }
 
-        // Function to get instance class
         function getInstanceClass(instance) {
             if (!instance) return '';
-            if (instance.toLowerCase().includes('sunray')) return 'instance-sunray';
-            if (instance.toLowerCase().includes('services')) return 'instance-services';
-            if (instance.toLowerCase().includes('jamsan')) return 'instance-jamsan';
-            if (instance.toLowerCase().includes('navika')) return 'instance-navika';
-            if (instance === '1') return 'instance-1';
-            if (instance === '2') return 'instance-2';
-            if (instance === '3') return 'instance-3';
-            if (instance === '4') return 'instance-4';
+            const inst = instance.toString().toLowerCase();
+            if (inst.includes('sunray')) return 'instance-sunray';
+            if (inst.includes('services')) return 'instance-services';
+            if (inst.includes('jamsan')) return 'instance-jamsan';
+            if (inst.includes('navika')) return 'instance-navika';
+            if (inst === '1') return 'instance-1';
+            if (inst === '2') return 'instance-2';
+            if (inst === '3') return 'instance-3';
+            if (inst === '4') return 'instance-4';
             return '';
         }
 
-        // Function to display clients
         function displayClients(clientsToDisplay) {
             resultsContainer.innerHTML = '';
-            
             if (clientsToDisplay.length === 0) {
-                resultsContainer.innerHTML = `
-                    <div class="no-results fade-in">
-                        <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 15px; color: #9ca3af;"></i>
-                        <h3 style="color: #1f2937; margin-bottom: 8px;">No results found</h3>
-                        <p style="color: #6b7280;">Try a different search term or filter</p>
-                    </div>
-                `;
+                resultsContainer.innerHTML = `<div class="no-results fade-in"><i class="fas fa-search" style="font-size: 3rem; margin-bottom: 15px; color: #9ca3af;"></i><h3 style="color: #1f2937; margin-bottom: 8px;">No results found</h3><p style="color: #6b7280;">Try a different search term or filter</p></div>`;
                 return;
             }
-            
-            clientsToDisplay.forEach(client => {
-                const card = createClientCard(client);
-                resultsContainer.appendChild(card);
-            });
+            clientsToDisplay.forEach(client => { resultsContainer.appendChild(createClientCard(client)); });
         }
 
-        // Function to create a client card
         function createClientCard(client) {
             const card = document.createElement('div');
             card.className = 'result-card fade-in';
-            
             const clientName = getClientName(client.url);
             const statusClass = getStatusClass(client.status);
             const instanceClass = getInstanceClass(client.instance);
             const instanceText = client.instance ? `Instance ${client.instance}` : 'Not Specified';
-            
             card.innerHTML = `
                 <div>
-                    <h3>
-                        ${clientName}
-                        ${client.instance ? `<span class="instance-tag ${instanceClass}">${instanceText}</span>` : ''}
-                    </h3>
+                    <h3>${clientName}${client.instance ? `<span class="instance-tag ${instanceClass}">${instanceText}</span>` : ''}</h3>
                     <div class="client-info">
-                        <div class="info-row">
-                            <span class="info-label">Status:</span>
-                            <span class="info-value ${statusClass}">${client.status || 'Not Specified'}</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-label">Type:</span>
-                            <span class="info-value">${client.type || 'Not Specified'}</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-label">Build Type:</span>
-                            <span class="info-value">${client.buildType || 'Not Specified'}</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-label">App IP:</span>
-                            <span class="info-value">${client.appIP || 'Not Specified'}</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-label">DB IP:</span>
-                            <span class="info-value">${client.dbIP || 'Not Specified'}</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-label">Instance:</span>
-                            <span class="info-value">${client.instance || 'Not Specified'}</span>
-                        </div>
+                        <div class="info-row"><span class="info-label">Status:</span><span class="info-value ${statusClass}">${client.status || 'Not Specified'}</span></div>
+                        <div class="info-row"><span class="info-label">Type:</span><span class="info-value">${client.type || 'Not Specified'}</span></div>
+                        <div class="info-row"><span class="info-label">Build Type:</span><span class="info-value">${client.buildType || 'Not Specified'}</span></div>
+                        <div class="info-row"><span class="info-label">App IP:</span><span class="info-value">${client.appIP || 'Not Specified'}</span></div>
+                        <div class="info-row"><span class="info-label">DB IP:</span><span class="info-value">${client.dbIP || 'Not Specified'}</span></div>
+                        <div class="info-row"><span class="info-label">Instance:</span><span class="info-value">${client.instance || 'Not Specified'}</span></div>
                     </div>
                 </div>
-                <a href="${client.url}" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> ${client.url}
-                </a>
+                <a href="${client.url}" target="_blank"><i class="fas fa-external-link-alt"></i> ${client.url}</a>
             `;
             return card;
         }
 
-        // Function to filter clients based on search input and current filter
         function filterClients() {
             const searchText = searchInput.value.toLowerCase().trim();
             let filteredClients = clients;
-            
-            // Apply category filter first
             if (currentFilter !== 'all') {
                 filteredClients = clients.filter(client => {
                     if (currentFilter === 'Active' && client.status && client.status.includes('Active')) return true;
@@ -802,43 +766,32 @@
                     return false;
                 });
             }
-            
-            // Then apply search filter
             if (searchText.length >= 1) {
                 filteredClients = filteredClients.filter(client => {
                     const clientName = getClientName(client.url).toLowerCase();
                     return clientName.includes(searchText) ||
-                           (client.status && client.status.toLowerCase().includes(searchText)) ||
-                           (client.type && client.type.toLowerCase().includes(searchText)) ||
-                           (client.buildType && client.buildType.toLowerCase().includes(searchText)) ||
-                           (client.appIP && client.appIP.includes(searchText)) ||
-                           (client.dbIP && client.dbIP.includes(searchText)) ||
-                           (client.instance && client.instance.toLowerCase().includes(searchText));
+                        (client.status && client.status.toLowerCase().includes(searchText)) ||
+                        (client.type && client.type.toLowerCase().includes(searchText)) ||
+                        (client.buildType && client.buildType.toLowerCase().includes(searchText)) ||
+                        (client.appIP && client.appIP.includes(searchText)) ||
+                        (client.dbIP && client.dbIP.includes(searchText)) ||
+                        (client.instance && client.instance.toString().toLowerCase().includes(searchText));
                 });
             }
-            
             displayClients(filteredClients);
         }
 
-        // Event listeners
         searchInput.addEventListener('input', filterClients);
         searchButton.addEventListener('click', filterClients);
-        
-        // Filter button event listeners
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
-                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
                 this.classList.add('active');
-                // Update current filter
                 currentFilter = this.getAttribute('data-filter');
-                // Apply filters
                 filterClients();
             });
         });
         
-        // Display all clients when the page loads
         displayClients(clients);
     </script>
 </body>
